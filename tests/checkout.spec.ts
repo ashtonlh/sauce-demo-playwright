@@ -29,6 +29,6 @@ test('user can complete checkout flow', async ({ page }) => {
 
   await cartPage.continueCheckout();
   await cartPage.finishCheckout();
-
+await page.screenshot({ path: 'screenshots/checkout-success.png' });
   await cartPage.verifyOrderComplete();
 });
